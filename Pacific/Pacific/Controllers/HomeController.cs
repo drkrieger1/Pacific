@@ -7,15 +7,11 @@ using System.Threading.Tasks;
 namespace Pacific.Controllers
 {
     public class HomeController : Controller 
-    {
+    {   
+        //WHY YOU DO DIS? 
         //IActionResult Index()
         //{
         //    return View();
-        //}
-
-        //public string Index()
-        //{
-        //    return "WtF?";
         //}
 
         public IActionResult Index()
