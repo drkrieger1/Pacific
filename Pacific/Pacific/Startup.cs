@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using Pacific.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Pacific
 {
@@ -14,11 +16,22 @@ namespace Pacific
     {
         public IConfiguration Configuration { get; }
 
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            //This is the Context for company info and leads database models
+            services.AddDbContext<CompanyInfoDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("PacificContext")));
+            services.AddDbContext<LeadDbContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("PacificContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
