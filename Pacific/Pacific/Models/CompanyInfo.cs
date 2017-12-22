@@ -16,7 +16,5 @@ namespace Pacific.Models
         public string Adress { get; set; }
 
         public int Phone { get; set; }
-
-
     }
 }
