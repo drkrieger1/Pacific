@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Pacific.Data;
+using Pacific.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,5 +31,28 @@ namespace Pacific.Controllers
             return View(await _Context.Lead.ToListAsync());
         }
 
+        //Get: Create
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        //Post: Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Create([Bind("ID, Name, Phone, Email, Comment")] Lead lead)
+        {
+            if (ModelState.IsValid)
+            {
+                _Context.Add(lead);
+                await _Context.SaveChangesAsync();
+                return RedirectToAction(("/Home/Index"));
+            }
+            return View();
+        }
+
+        //edit 
+
+        //Delete 
     }
 }
