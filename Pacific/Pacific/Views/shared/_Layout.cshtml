@@ -1,17 +1,26 @@
 ﻿<!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width" />
+    @*-------------------------------------- Meta --------------------------------------------*@
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>@ViewBag.Title</title>
-
+    @*-------------------------------------- stylesheets -------------------------------------*@
     <link  rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/Style/StyleSheet.css" />
 
 </head>
 <body>
+    @*--------------------------------------- Nav Bar ----------------------------------------*@
+    @*<container>*@
+        <nav class="navbar navbar-default">
+            <a class=" navbar-brand" href="~/img/Logo.png"></a>
+
+        </nav>
+    @*</container>*@
+    <h1>layout</h1>
     <div>
-        <h1>this is a layout test</h1>
         @RenderBody()
     </div>
 </body>
