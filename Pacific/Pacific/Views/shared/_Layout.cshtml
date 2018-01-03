@@ -10,16 +10,16 @@
     <link  rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/Style/StyleSheet.css" />
 
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+
 </head>
 <body>
     @*--------------------------------------- Nav Bar ----------------------------------------*@
-    @*<container>*@
-        <nav class="navbar navbar-default">
-            <a class=" navbar-brand" href="~/img/Logo.png"></a>
+    
+    <div class="navbar navbar-dark">
+        <a class="navbar-brand" href="#"><img src="~/img/Logo.png" width="200" /></a>
 
-        </nav>
-    @*</container>*@
-    <h1>layout</h1>
+    </div>   
     <div>
         @RenderBody()
     </div>
