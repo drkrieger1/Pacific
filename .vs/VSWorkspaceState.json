@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Pacific"
+    "\\Pacific",
+    "\\Pacific\\Pacific",
+    "\\Pacific\\Pacific\\Controllers"
   ],
   "SelectedNode": "\\Pacific\\Pacific.sln",
   "PreviewInSolutionExplorer": false
