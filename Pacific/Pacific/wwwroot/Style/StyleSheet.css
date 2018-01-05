@@ -1,7 +1,11 @@
-﻿body{
-
+﻿body {
+    background-color: #EAF27C;
 }
 
-.NavLogo{
+.navbar-brand img{
+    width: 200px;
+}
+
+/*#logo{
     width: 100px;
-}
+}*/
