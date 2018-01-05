@@ -9,27 +9,28 @@
     @*-------------------------------------- stylesheets -------------------------------------*@
     <link  rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/Style/StyleSheet.css" />
-
+    <style>
+        body {
+            background-color: #EAF27C;
+        }
+        .navbar-brand img{
+            width: 30%;
+        }
+        footer {
+            background-color: #0B0B0B;
+            color: #A5A5A5;
+        }
+    </style>
 
 </head>
 <body>
     @*--------------------------------------- Nav Bar ----------------------------------------*@
     
-    @*<nav class="navbar navbar-toggleable-md navbar-dark">
-        <a class="navbar-brand" href="#"><img src="~/img/Logo.png" width="200" /></a>
-
-    </nav>*@   
-
-    @*<ul class="nav justify-content-center">
-        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>      
-    </ul>*@
-
-    <nav class="navbar navbar-toggleable-md navbar-light" style="background-color:aqua">
+    <nav class="navbar navbar-toggleable-md navbar-light" style="background-color: grey">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#"><img class="NavLogo"src="~/img/LogoCut.png" width="200" /></a>
+        <a class="navbar-brand" href="#"><img id="logo" src="~/img/LogoCut.png" /></a>
 
         <div class="collapse navbar-collapse" id="navbarMobile">
             <ul class="navbar-nav mr-auto">
@@ -50,6 +51,11 @@
         @RenderBody()
     </div>
 
+    <footer>
+        <div class="container-fluid ">
+            <p>&copy; Copyright 2018 Pacific Quality Construction</p>
+        </div>
+    </footer>
     @*---------------------------- Bootstrap Scripts -----------------------------------------------*@
     <script src="~/lib/jquery/dist/jquery.js"></script>
     <script src="~/lib/tether/dist/js/tether.min.js"></script>
