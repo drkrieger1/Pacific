@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="~/Style/StyleSheet.css" />
     <style>
         body {
-            background-color: #EAF27C;
+            background-color: #003F62;
+            /*width: 100%;
+            background-image: url('img/copper1920.jpg');*/
         }
         nav {
-            background-color: #003F62;
-            color: #ffffff;
+            background-color: #ffffff;
         }
         /*.nav-link{
             color: #FFFFFF;
@@ -25,20 +26,23 @@
             width: 30%;
         }
         footer {
-            background-color: #0B0B0B;
+            background-color: #2A2D34;
             color: #A5A5A5;
         }
         /*Not really sure why this does not work.*/
         /*.nav-link {
             color: #ffffff;
         }*/
+        .jumbotron-fluid img {
+            width: 100%;
+        }
     </style>
 
 </head>
 <body>
     @*--------------------------------------- Nav Bar ----------------------------------------*@
     
-    <nav class="navbar navbar-toggleable-md navbar-light">
+    <nav class="navbar navbar-toggleable-md fixed-top navbar-light">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -64,8 +68,12 @@
     </div>
 
     <footer>
-        <div class="container-fluid ">
-            <p>&copy; Copyright 2018 Pacific Quality Construction</p>
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <p>&copy; Copyright 2018 Pacific Quality Construction</p>
+            </div>
+            </div>
         </div>
     </footer>
     @*---------------------------- Bootstrap Scripts -----------------------------------------------*@
