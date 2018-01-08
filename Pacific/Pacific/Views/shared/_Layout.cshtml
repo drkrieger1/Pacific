@@ -8,19 +8,32 @@
     <title>@ViewBag.Title</title>
     @*-------------------------------------- stylesheets -------------------------------------*@
     <link  rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/Style/StyleSheet.css" />
+   
     <style>
+        .header-parallax {            
+            background-image: url('img/copper1920.jpg');
+            height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
         body {
-            background-color: #003F62;
+            /*background-color: #003F62;*/
             /*width: 100%;
-            background-image: url('img/copper1920.jpg');*/
+            background-image: url('img/copper1920.jpg');
+            height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;*/
         }
         nav {
             background-color: #ffffff;
         }
-        /*.nav-link{
+        .nav-link{
             color: #FFFFFF;
-        }*/
+        }
 
         .navbar-brand img{
             width: 30%;
@@ -29,20 +42,21 @@
             background-color: #2A2D34;
             color: #A5A5A5;
         }
-        /*Not really sure why this does not work.*/
-        /*.nav-link {
+        Not really sure why this does not work.
+        .nav-link {
             color: #ffffff;
-        }*/
-        .jumbotron-fluid img {
-            width: 100%;
         }
+        /*.jumbotron-fluid img {
+            width: 100%;
+        }*/
+        
     </style>
 
 </head>
 <body>
     @*--------------------------------------- Nav Bar ----------------------------------------*@
     
-    <nav class="navbar navbar-toggleable-md fixed-top navbar-light">
+    <nav class="navbar navbar-toggleable-md navbar-light">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -62,6 +76,11 @@
             </ul>         
         </div>
     </nav>
+    <div class="header-parallax">
+        <div class="header-content">
+            <h1>Some Text here</h1>
+        </div>
+    </div>
 
     <div>
         @RenderBody()
@@ -70,7 +89,7 @@
     <footer>
         <div class="container">
             <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <p>&copy; Copyright 2018 Pacific Quality Construction</p>
             </div>
             </div>
