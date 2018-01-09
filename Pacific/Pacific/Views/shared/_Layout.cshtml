@@ -7,20 +7,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>@ViewBag.Title</title>
     @*-------------------------------------- stylesheets -------------------------------------*@
+    <link href="https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One" rel="stylesheet">
     <link  rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/Style/StyleSheet.css" />
+   
     <style>
+        .header-parallax {            
+            background-image: url('img/copper1920.jpg');
+            /*height: 4em;*/
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .header-content {
+            background-color: rgba(0, 63, 98, 0.8);
+            padding: 0.5em;
+            font-size:2em;
+            text-align: center;
+            color: #FFFFFF;
+            font-family: 'Fjalla One', sans-serif;
+        }
+        .parallax-section {         
+            background-color: rgba(0, 63, 98, 0.8);
+        }
+        .parallax-carousel {
+            background-color: rgba(201, 221, 48, 0.74);
+        }
+        .parallax-contact {
+            /*background-color: rgba(255, 0, 0, 1);*/
+        }
+        .container-fluid {
+            padding-right: 0;
+            padding-left: 0;
+            margin-right: auto;
+            margin-left: auto;
+            background-image: url('img/copper1920.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallax-section-content {
+            color: #FFFFFF;
+            font-family: 'Cantarell', sans-serif;
+            /*background-color: rgba(0, 63, 98, 0.8);
+            border-radius: 1em;*/
+        }
+        .parallax-section-content p{
+            padding: 1em;   
+        }
         body {
-            background-color: #003F62;
+            /*background-color: #003F62;*/
             /*width: 100%;
-            background-image: url('img/copper1920.jpg');*/
+            background-image: url('img/copper1920.jpg');
+            height: 100%;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;*/
         }
         nav {
             background-color: #ffffff;
         }
-        /*.nav-link{
+        .nav-link{
             color: #FFFFFF;
-        }*/
+        }
 
         .navbar-brand img{
             width: 30%;
@@ -28,21 +80,16 @@
         footer {
             background-color: #2A2D34;
             color: #A5A5A5;
-        }
-        /*Not really sure why this does not work.*/
-        /*.nav-link {
-            color: #ffffff;
-        }*/
-        .jumbotron-fluid img {
-            width: 100%;
-        }
+        }    
+       
+        
     </style>
 
 </head>
 <body>
     @*--------------------------------------- Nav Bar ----------------------------------------*@
     
-    <nav class="navbar navbar-toggleable-md fixed-top navbar-light">
+    <nav class="navbar navbar-toggleable-md navbar-light">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -51,26 +98,32 @@
         <div class="collapse navbar-collapse" id="navbarMobile">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a id="link" class="nav-link" href="#">Home</a>
+                    <a id="link" class="nav-link link-custom" href="#">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link" href="#">Contact</a>
                 </li>
             </ul>         
         </div>
     </nav>
+    <div class="header-parallax">
+        <div class="header-content">
+            <h1>Some Text here</h1>
+            
+        </div>
+    </div>
 
-    <div>
+    <div class="container-fluid">
         @RenderBody()
     </div>
 
     <footer>
         <div class="container">
             <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12">
+              <div class="col-sm-6 col-md-6 col-lg-12 col-xl-12">
                 <p>&copy; Copyright 2018 Pacific Quality Construction</p>
             </div>
             </div>
