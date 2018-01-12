@@ -54,6 +54,26 @@ namespace Pacific.Controllers
         }
 
         //edit 
+        public async Task<IActionResult> Edit(int? id)
+        {
+            //check if lead exists
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            //Get selected Lead
+
+            var lead = await _Context.Lead
+                .SingleOrDefaultAsync(l => l.ID == id);
+
+            if(lead == null)
+            {
+                return NotFound();
+            }
+
+            return View(lead);
+        }
 
         //Delete 
     }
