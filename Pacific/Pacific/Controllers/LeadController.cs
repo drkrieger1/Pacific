@@ -38,13 +38,14 @@ namespace Pacific.Controllers
         }
 
         //Post: Create
-        //******************************** Need to make a lead view model *************************************
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID, Name, Phone, Email, Comment")] Lead lead)
-        {
+        public async Task<IActionResult> Create([Bind("ID, Name, Phone, Email, Comment, Date")] Lead lead)
+        {   
             if (ModelState.IsValid)
             {
+                lead.Date = DateTime.UtcNow;
+                
                 _Context.Add(lead);
                 await _Context.SaveChangesAsync();
                 return RedirectToAction(("/Home/Index"));
