@@ -94,6 +94,38 @@ namespace Pacific.Controllers
             return View(lead);
         }
 
-        //Delete 
+        //Get: Delete method that will select a lead to delete
+        public async Task<IActionResult> Delete(int? id)
+        {
+            //Check for leads existance
+            if(id == null)
+            {
+                return NotFound();
+            }
+
+            //Retreving the selected lead for deletion
+            var lead = await _Context.Lead
+                .SingleOrDefaultAsync(l => l.ID == id);
+            if(lead == null)
+            {
+                return NotFound();
+            }
+
+            return View(lead);
+        }
+
+        //Post: delete confermation
+        public async Task<IActionResult> DeleteConfirmed(int id)
+        {
+            //selected lead for deletion
+            var lead = await _Context.Lead
+                .SingleOrDefaultAsync(l => l.ID == id);
+
+            //Lead deletion
+             _Context.Lead.Remove(lead);
+            await _Context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
