@@ -53,7 +53,7 @@ namespace Pacific.Controllers
             return View();
         }
 
-        //edit 
+        //Get: edit action
         public async Task<IActionResult> Edit(int? id)
         {
             //check if lead exists
@@ -72,6 +72,25 @@ namespace Pacific.Controllers
                 return NotFound();
             }
 
+            return View(lead);
+        }
+
+        //Post: for Edit method
+        public async Task<IActionResult> Edit(int id, [Bind("ID, Name, Phone, Email, Comment, Date")] Lead lead)
+        {
+            //Check for leads existance
+            if (id != lead.ID)
+            {
+                return NotFound();
+            }
+
+            //Apply and save Edits
+            if(ModelState.IsValid)
+            {
+                _Context.Update(lead);
+                await _Context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
             return View(lead);
         }
 
