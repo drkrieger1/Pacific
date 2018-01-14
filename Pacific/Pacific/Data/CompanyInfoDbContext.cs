@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Pacific.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,5 +14,7 @@ namespace Pacific.Data
         {
 
         }
+
+        public DbSet<CompanyInfo> CompanyInfo { get; set; }
     }
 }
