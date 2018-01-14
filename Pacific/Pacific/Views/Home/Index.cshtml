@@ -1,4 +1,5 @@
-﻿
+﻿@model Pacific.Models.Lead 
+
 @{ 
     Layout = "_Layout";
 }
@@ -85,25 +86,25 @@
     <div class="container parallax-section-content">
         <div class="row form-row">
             <div class="col-sm-12 col-md-12 col-lg-4 contact-form-col">
-                <form class="contact-form">
+                <form method="post" asp-controller="Lead" asp-action="Create" class="contact-form">
                     <h2>Connect With Us</h2>
                     <div class="form-group">
-                        <lable for="contact-name">Name:</lable>
-                        <input type="text" class="form-control" id="contact-name" placeholder="exp:name" />
+                        <lable asp-for="Name" for="contact-name">Name:</lable>
+                        <input asp-for="Name" type="text" class="form-control" id="contact-name" placeholder="exp:name" />
                     </div>
                     <div class="form-group">
-                        <lable for="contact-phone">Phone:</lable>
-                        <input type="number" class="form-control" id="contact-phone" placeholder="exp:14155552671" />
+                        <lable asp-for="Phone" for="contact-phone">Phone:</lable>
+                        <input asp-for="Phone" type="number" class="form-control" id="contact-phone" placeholder="exp:14155552671" />
                     </div>
                     <div class="form-group">
-                        <lable for="contact-email">Email:</lable>
-                        <input type="email" class="form-control" id="contact-phone" placeholder="exp:bill@buissnes.com" />
+                        <lable asp-for="Email" for="contact-email">Email:</lable>
+                        <input asp-for="Email" type="email" class="form-control" id="contact-phone" placeholder="exp:bill@buissnes.com" />
                     </div>
                     <div class="form-group">
-                        <lable for="contact-message">Message:</lable>
-                        <textarea class="form-control" id="contact-message" rows="5"></textarea>
+                        <lable asp-for="Comment" for="contact-message">Message:</lable>
+                        <textarea asp-for="Comment" class="form-control" id="contact-message" rows="5"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" >Submit</button>
+                    <button type="submit" value="Create" class="btn btn-primary" >Submit</button>
                 </form>
             </div>
         </div>
