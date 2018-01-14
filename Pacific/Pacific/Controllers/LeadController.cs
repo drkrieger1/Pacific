@@ -48,7 +48,7 @@ namespace Pacific.Controllers
                 
                 _Context.Add(lead);
                 await _Context.SaveChangesAsync();
-                return RedirectToAction(("/Home/Index"));
+                return Redirect("/Home/Index");
             }
             return View();
         }
