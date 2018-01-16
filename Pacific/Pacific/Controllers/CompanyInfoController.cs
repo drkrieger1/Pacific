@@ -8,5 +8,9 @@ namespace Pacific.Controllers
 {
     public class CompanyInfoController : Controller 
     {
+        public IActionResult Index()
+        {
+            return View();
+        }
     }
 }
