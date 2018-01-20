@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Pacific.Models.CompanyInfo>
+
+@{ 
+    Layout = "_Layout";
+}
+<h2>Company Info</h2>
+<hr />
+<a asp-controller="CompanyInfo" asp-action="Create">create new</a>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+            <table class="table">
+                <thead style="background-color:black; color:white;"> @*<---------------------------------------- WARNING INLINE STYLE-------> *@
+                    <tr>
+                        <th>@Html.DisplayNameFor(model => model.Name)</th>
+                        <th>@Html.DisplayNameFor(model => model.Email)</th>
+                        <th>@Html.DisplayNameFor(model => model.Mission)</th>
+                        <th>@Html.DisplayNameFor(model => model.AdressLine1)</th>
+                        <th>@Html.DisplayNameFor(model => model.AdressLine2)</th>
+                        <th>@Html.DisplayNameFor(model => model.State)</th>
+                        <th>@Html.DisplayNameFor(model => model.ZipCode)</th>
+                        <th>@Html.DisplayNameFor(model => model.Phone)</th>
+                        <th>Details/Delete</th>
+                    </tr>
+                </thead>
+                <tbody style="background-color:white; color:black;">@*<---------------------------------------- WARNING INLINE STYLE-------> *@
+                     @foreach (var item in Model)
+                      {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Mission)</td>
+                            <td>@Html.DisplayFor(modelItem => item.AdressLine1)</td>
+                            <td>@Html.DisplayFor(modelItem => item.AdressLine2)</td>
+                            <td>@Html.DisplayFor(modelItem => item.State)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ZipCode)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Phone)</td>
+
+                            <td>
+                                <a>Details</a> |
+                                <a>Delete</a>
+                            </td>
+                        </tr>
+                      }
+                </tbody>
+           </table>
+        </div>
+     </div>
+ </div>
