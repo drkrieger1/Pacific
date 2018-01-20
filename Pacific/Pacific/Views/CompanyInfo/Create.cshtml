@@ -1,1 +1,51 @@
-﻿
+﻿@model Pacific.Models.CompanyInfo
+
+@{ 
+    Layout = "_Layout";
+}
+
+<h1>Create a new CompanyInfo model</h1>
+<hr />
+
+<div class="container parallax-section-content">
+    <div class="row form-row">
+        <div class="col-sm-12 col-md-12 col-lg-4 contact-form-col">
+            <form method="post" asp-controller="CompanyInfo" asp-action="Create" class="CompanyCreation-form" style="background-color: black"> @*INLINE STYLE*@
+
+                <div class="form-group">
+                    <label asp-for="Name" for="company-name">Name:</label>
+                    <input asp-for="Name" type="text" class="form-control" id="company-name" placeholder="exp:name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Email" for="company-email">Email:</label>
+                    <input asp-for="Email" type="email" class="form-control" id="company-email" placeholder="example@mail.com" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Mission" for="Mission-message">Mission Statement:</label>
+                    <textarea asp-for="Mission" class="form-control" id="Mission-message" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdressLine1" for="company-adressLine1">AddressLine1:</label>
+                    <input asp-for="AdressLine1" type="text" class="form-control" id="company-adressLine1" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="AdressLine2" for="company-adressLine2">AddressLine2:</label>
+                    <input asp-for="AdressLine2" type="text" class="form-control" id="company-adressLine2" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="State" for="company-state">State:</label>
+                    <input asp-for="State" type="text" class="form-control" id="company-State" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="ZipCode" for="company-zipCode">Zip Code:</label>
+                    <input asp-for="ZipCode" type="number" class="form-control" id="company-zipCode" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Phone" for="company-phone">phone:</label>
+                    <input asp-for="Phone" type="number" class="form-control" id="company-phone" />
+                </div>
+                <button type="submit" value="Create" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

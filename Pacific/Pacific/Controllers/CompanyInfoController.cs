@@ -46,7 +46,7 @@ namespace Pacific.Controllers
             {              
                 _Context.Add(companyInfo);
                 await _Context.SaveChangesAsync();
-                return Redirect("/Home/Index");
+                return Redirect("/CompanyInfo/Index");
             }
             return View();
         }
