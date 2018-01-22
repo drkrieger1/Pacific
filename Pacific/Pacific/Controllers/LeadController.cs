@@ -122,7 +122,7 @@ namespace Pacific.Controllers
             //selected lead for deletion
             var lead = await _Context.Lead
                 .SingleOrDefaultAsync(l => l.ID == id);
-
+          
             //Lead deletion
              _Context.Lead.Remove(lead);
             await _Context.SaveChangesAsync();
