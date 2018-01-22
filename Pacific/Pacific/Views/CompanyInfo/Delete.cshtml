@@ -1,1 +1,75 @@
-﻿
+﻿@model Pacific.Models.CompanyInfo 
+
+@{ 
+    Layout = "_Layout";
+}
+
+<div class="container">
+    <h2>Delete</h2>
+    <hr />
+    <dl class="dl-horiszontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mission)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Mission)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AdressLine1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdressLine1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdressLine2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdressLine2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.State)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.State)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ZipCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ZipCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+    </dl>
+
+    <form asp-action="DeleteConfirmed">
+        <input type="hidden" asp-for="@Model.ID" />
+        <input type="submit" value="Delete" class="btn btn-warning" /> |
+        <a asp-action="Index">Black To List</a>
+    </form>
+</div>
