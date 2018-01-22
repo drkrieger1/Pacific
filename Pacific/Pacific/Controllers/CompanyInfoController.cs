@@ -74,6 +74,8 @@ namespace Pacific.Controllers
         }
 
         //Post: for Edit method
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("ID, Name, Email, Mission, AdressLine1, AdressLine2, State, ZipCode, Phone")] CompanyInfo companyInfo)
         {
             //Check for leads existance
