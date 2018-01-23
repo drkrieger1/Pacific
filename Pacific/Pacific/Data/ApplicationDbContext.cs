@@ -14,5 +14,7 @@ namespace Pacific.Data
         {
 
         }
+
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
     }
 }
