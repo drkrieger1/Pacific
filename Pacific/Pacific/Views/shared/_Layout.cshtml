@@ -6,102 +6,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>@ViewBag.Title</title>
-    @*-------------------------------------- stylesheets -------------------------------------*@
-    <link href="https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One" rel="stylesheet">
-    <link  rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-   
-    <style>
-        .header-parallax {            
-            background-image: url('img/copper1920.jpg');
-            /*height: 4em;*/
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .header-content {
-            background-color: rgba(0, 63, 98, 0.8);
-            padding: 0.5em;
-            font-size:2em;
-            text-align: center;
-            color: #FFFFFF;
-            font-family: 'Fjalla One', sans-serif;
-        }
-        .parallax-section {         
-            background-color: rgba(0, 63, 98, 0.8);
-        }
-        .parallax-carousel {
-            background-color: rgba(201, 221, 48, 0.74);
-        }
-        .parallax-contact {
-            background-color: rgba(0, 63, 98, 0.73);
-        }
-        .parallax-carousel-row{  
-            margin: auto;
-        } 
-        .carousel-inner img{
-            width: 100%;
-        }
-        .contact-form-col{
-            margin: auto;
-        }
-        .contact-form {
-            background-color: rgba(0, 63, 98, 0.8);
-            padding: 1em;
-            color:#ffffff;
-        }
-        /*.form-row {
-            background-color: rgba(0, 63, 98, 0.8);
-        }*/
-        .container-fluid {
-            padding-right: 0;
-            padding-left: 0;
-            margin-right: auto;
-            margin-left: auto;
-            background-image: url('img/copper1920.jpg');
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .parallax-section-content {
-            color: #FFFFFF;
-            font-family: 'Cantarell', sans-serif;
-            /*background-color: rgba(0, 63, 98, 0.8);*/
-            border-radius: 1em;
-        }
-        .parallax-section-content p{
-            padding: 1em;   
-        }
-        body {
-            /*background-color: #003F62;*/
-            /*width: 100%;
-            background-image: url('img/copper1920.jpg');
-            height: 100%;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;*/
-        }
-        nav {
-            background-color: #ffffff;
-        }
-        .nav-link{
-            color: #FFFFFF;
-        }
-
-        .navbar-brand img{
-            width: 30%;
-        }
-        footer {
-            background-color: #2A2D34;
-            color: #A5A5A5;
-        }    
-       
-        
-    </style>
-
+    <environment names="Development">
+        @*-------------------------------------- stylesheets -------------------------------------*@
+        <link href="https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One" rel="stylesheet">
+        <link  rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/Custom.css" />
+    </environment>
+     <environment names="Staging,Production">
+         <link href="https://fonts.googleapis.com/css?family=Cantarell|Fjalla+One" rel="stylesheet">
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <link rel="stylesheet" href="~/Custom.css" />
+     </environment>
+  
 </head>
 <body>
     @*--------------------------------------- Nav Bar ----------------------------------------*@
@@ -149,10 +65,17 @@
             </div>
         </div>
     </footer>
-    @*---------------------------- Bootstrap Scripts -----------------------------------------------*@
-    <script src="~/lib/jquery/dist/jquery.js"></script>
-    <script src="~/lib/tether/dist/js/tether.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <environment names="Development">
+        @*---------------------------- Bootstrap Scripts -----------------------------------------------*@
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/tether/dist/js/tether.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    </environment>
+    <environment names="Staging, Production">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </environment>
 
 </body>
 </html>
