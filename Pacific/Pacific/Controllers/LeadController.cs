@@ -129,5 +129,10 @@ namespace Pacific.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        //Get
+        public IActionResult Success()
+        {
+            return View();
+        }
     }
 }
