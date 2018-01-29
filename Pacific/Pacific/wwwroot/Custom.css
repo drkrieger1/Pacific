@@ -17,15 +17,18 @@
 }
 
 .parallax-section {
-    background-color: rgba(0, 63, 98, 0.8);
+    /*background-color: rgba(0, 63, 98, 0.8);*/
+    background-color: rgba(255,0, 0, 0.73);
 }
 
 .parallax-carousel {
-    background-color: rgba(201, 221, 48, 0.74);
+    /*background-color: rgba(201, 221, 48, 0.74);*/
+    background-color: rgba(42, 45, 52, 0.74);
 }
 
 .parallax-contact {
-    background-color: rgba(0, 63, 98, 0.73);
+    /*background-color: rgba(0, 63, 98, 0.73);*/
+    background-color: rgba(255,0, 0, 0.73);
 }
 
 .parallax-carousel-row {
@@ -41,7 +44,8 @@
 }
 
 .contact-form {
-    background-color: rgba(0, 63, 98, 0.8);
+    background-color: rgba(42, 45, 52, 1);
+    /*background-color: rgba(0, 63, 98, 0.8);*/
     padding: 1em;
     color: #ffffff;
 }
