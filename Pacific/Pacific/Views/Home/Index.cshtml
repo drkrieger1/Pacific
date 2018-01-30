@@ -87,22 +87,27 @@
         <div class="row form-row">
             <div class="col-sm-12 col-md-12 col-lg-4 contact-form-col">
                 <form method="post" asp-controller="Lead" asp-action="Create" class="contact-form">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <h2>Connect With Us</h2>
                     <div class="form-group">
                         <label asp-for="Name" for="contact-name">Name:</label>
                         <input asp-for="Name" type="text" class="form-control" id="contact-name" placeholder="exp:name" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Phone" for="contact-phone">Phone:</label>
                         <input asp-for="Phone" type="number" class="form-control" id="contact-phone" placeholder="exp:14155552671" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Email" for="contact-email">Email:</label>
                         <input asp-for="Email" type="email" class="form-control" id="contact-phone" placeholder="exp:bill@buissnes.com" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Comment" for="contact-message">Message:</label>
                         <textarea asp-for="Comment" class="form-control" id="contact-message" rows="5"></textarea>
+                        <span asp-validation-for="Comment" class="text-danger"></span>
                     </div>
                     <button type="submit" value="Create" class="btn btn-primary" >Submit</button>
                 </form>
