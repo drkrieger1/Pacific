@@ -26,7 +26,7 @@
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarMobile" aria-controls="navbarMobile" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" asp-controller="home" asp-action="Index"><img id="logo" src="~/img/BlueLogoCut.png" /></a>
+        <a class="navbar-brand" asp-controller="home" asp-action="Index"><img id="logo" src="~/img/LogoCut.png" /></a>
 
         <div class="collapse navbar-collapse" id="navbarMobile">
             <ul class="navbar-nav mr-auto">
@@ -39,18 +39,18 @@
                 <li class="nav-item">
                     <a class="nav-link" asp-controller="home" asp-action="Contact">Contact</a>
                 </li>
-                <li class="nav-item">
+                @*<li class="nav-item">
                     <a class="nav-link" asp-controller="lead" asp-action="Index">Leads</a>
-                </li>
+                </li>*@
             </ul>         
         </div>
     </nav>
-    <div class="header-parallax">
+    @*<div class="header-parallax">
         <div class="header-content">
             <h1>Deployment Test</h1>
             
         </div>
-    </div>
+    </div>*@
 
     <div class="container-fluid">
         @RenderBody()
