@@ -6,6 +6,14 @@
     background-repeat: no-repeat;
     background-size: cover;
 }*/
+.header-logo{ 
+    margin: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+#logo{
+    width: 50%;
+}
 
 .header-content {
     background-color: gray;
