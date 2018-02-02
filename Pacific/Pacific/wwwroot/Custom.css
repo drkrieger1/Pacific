@@ -55,9 +55,7 @@
     padding: 1em;
     color: #ffffff;
 }
-/*.form-row {
-            background-color: rgba(0, 63, 98, 0.8);
-        }*/
+
 .container-fluid {
     padding-right: 0;
     padding-left: 0;
@@ -77,9 +75,9 @@
     border-radius: 1em;
 }
 
-    .parallax-section-content p {
-        padding: 1em;
-    }
+.parallax-section-content p {
+   padding: 1em;
+}
 
 nav {
     background-color: #ffffff;
@@ -93,7 +91,14 @@ nav {
     width: 30%;
 }
 
-footer {
-    background-color: #000000;
+.companyInfo {  
+    color: white;
+    background-color: gray;
+    background-color: rgba(42, 45, 52, 0.74);
+}
+
+
+.footer {
+    background-color:#000000;
     color: #fff;
 }
