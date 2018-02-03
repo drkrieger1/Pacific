@@ -1,4 +1,4 @@
-﻿@model Pacific.Models.Lead 
+﻿@model Pacific.Models.QuickEmail
 
 @{ 
     Layout = "_Layout";
@@ -83,8 +83,8 @@
 
 <div class="parallax-section">
    <div class="container" style="color:white; text-align:center; margin:auto; padding-top:10px; padding-bottom: 20px;">
-      <h1 style="margin:auto;">206-434-2713</h1>
-       <h1 style="margin:auto;">operations@pqconstruction.us</h1>
+      <h1 style="margin:auto; font-size:2em;">206-434-2713</h1>
+       <h1 style="margin:auto; font-size:1em;">operations@pqconstruction.us</h1>
    </div>
 </div>
 
@@ -93,31 +93,31 @@
 <div class="parallax-contact">
     <div class="container parallax-section-content">
         <div class="row form-row">
-            <div class="col-sm-12 col-md-5 col-lg-5 contact-form-col">
-                <form class="contact-form">
+            <div class="col-sm-12 col-md-6 col-lg-6 contact-form-col">
+                <form class="contact-form" asp-controller="Home" asp-action="Connect" method="post">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <h2>Connect With Us</h2>
                     <div class="form-group">
-                        <label asp-for="Name" for="contact-name">Name:</label>
-                        <input asp-for="Name" type="text" class="form-control" id="contact-name" placeholder="exp:name" />
+                        <label asp-for="Name" >Name:</label>
+                        <input asp-for="Name" type="text" class="form-control"  placeholder="exp:name" />
                         <span asp-validation-for="Name" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Phone" for="contact-phone">Phone:</label>
-                        <input asp-for="Phone" type="number" class="form-control" id="contact-phone" placeholder="exp:14155552671" />
+                        <label asp-for="Phone" >Phone:</label>
+                        <input asp-for="Phone" type="number" class="form-control" placeholder="exp:14155552671" />
                         <span asp-validation-for="Phone" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Email" for="contact-email">Email:</label>
-                        <input asp-for="Email" type="email" class="form-control" id="contact-phone" placeholder="exp:bill@buissnes.com" />
+                        <label asp-for="Email" >Email:</label>
+                        <input asp-for="Email" type="email" class="form-control" placeholder="exp:bill@buissnes.com" />
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        <label asp-for="Comment" for="contact-message">Message:</label>
-                        <textarea asp-for="Comment" class="form-control" id="contact-message" rows="5"></textarea>
+                        <label asp-for="Comment">Message:</label>
+                        <textarea asp-for="Comment" class="form-control" rows="5"></textarea>
                         <span asp-validation-for="Comment" class="text-danger"></span>
                     </div>
-                    <button type="submit" value="Create" class="btn btn-primary" >Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
