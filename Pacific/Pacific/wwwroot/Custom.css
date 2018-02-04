@@ -51,6 +51,10 @@
 .carousel-inner img {
     width: 100%;
 }
+#poop {
+    background-color: gray;
+    background-color: rgba(42, 45, 52, 0.74);
+}
 
 .contact-form-col {
     margin: auto;

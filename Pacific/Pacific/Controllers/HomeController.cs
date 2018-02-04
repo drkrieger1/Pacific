@@ -48,22 +48,22 @@ namespace Pacific.Controllers
         {
             if (ModelState.IsValid)
             {
-                var message = new MimeMessage();
-                message.From.Add(new MailboxAddress("Client Lead", "webServices@pqconstruction.us"));
-                message.To.Add(new MailboxAddress($"{lead.Name} ", "eplyushko@gmail.com"));
-                message.Subject = "Connection Lead";
-                message.Body = new TextPart("plain")
-                {
-                    Text = $"Name:{lead.Name} | Phone:{lead.Phone} | Email:{lead.Email} \n Message: {lead.Comment}"
-                };
+                //var message = new MimeMessage();
+                //message.From.Add(new MailboxAddress("Client Lead", "webServices@pqconstruction.us"));
+                //message.To.Add(new MailboxAddress($"{lead.Name} ", "eplyushko@gmail.com"));
+                //message.Subject = "Connection Lead";
+                //message.Body = new TextPart("plain")
+                //{
+                //    Text = $"Name:{lead.Name} | Phone:{lead.Phone} | Email:{lead.Email} \n Message: {lead.Comment}"
+                //};
 
-                using (var client = new SmtpClient())
-                {
-                    client.Connect("smtp.zoho.com", 587, false);
-                    client.Authenticate("USER_NAME", "PASSWORD");
-                    client.Send(message);
-                    client.Disconnect(true);
-                }
+                //using (var client = new SmtpClient())
+                //{
+                //    client.Connect("smtp.zoho.com", 587, false);
+                //    client.Authenticate("USER_NAME", "PASSWORD");
+                //    client.Send(message);
+                //    client.Disconnect(true);
+                //}
                 return Redirect("/Home/Index");
             }
             
