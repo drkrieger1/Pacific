@@ -23,15 +23,15 @@ namespace Pacific.Controllers
             return View();
         }
 
-        public IActionResult About()
-        {
-            return View();
-        }
+        //public IActionResult About()
+        //{
+        //    return View();
+        //}
 
-        public IActionResult Contact()
-        {
-            return View();
-        }
+        //public IActionResult Contact()
+        //{
+        //    return View();
+        //}
 
         [HttpPost]
         public IActionResult Connect([Bind("Name,Phone,Email,Comment")]QuickEmail lead)
@@ -39,15 +39,15 @@ namespace Pacific.Controllers
             if (ModelState.IsValid)
             {
                 var message = new MimeMessage();
-                message.From.Add(new MailboxAddress("Client Lead", "webServices@pqconstruction.us"));
-                message.To.Add(new MailboxAddress($"{lead.Name} ", "eplyushko@gmail.com"));
+                message.From.Add(new MailboxAddress("Client Contact Request", "webServices@pqconstruction.us"));
+                message.To.Add(new MailboxAddress($"Operations", "operations@pqconstruction.us"));
                 message.Subject = "Connection Lead";
-                message.Body = new TextPart("plain")
+                message.Body = new TextPart("html")
                 {
-                    Text = $"Name:{lead.Name} | Phone:{lead.Phone} | Email:{lead.Email} \n Message: {lead.Comment}"
+                    Text = $"<h2>Contact Info</h2><p>{lead.Name}</p><p>{lead.Phone}</p><p>{lead.Email}</p><p>{lead.Comment}</p>"                 
                 };
                 
-                //gathering login info
+                //Gathering login info
                 var user = _Configuration.GetConnectionString("User_Name");
                 var password = _Configuration.GetConnectionString("Email_Password");
                 using (var client = new SmtpClient())
