@@ -7,4 +7,4 @@ This is a small web application for pacific quality construction
 - Bootstrap V4
 
 ## Deployment
-http://pqconstruction.us/
+[www.pqconstruction.us](http://pqconstruction.us/)
