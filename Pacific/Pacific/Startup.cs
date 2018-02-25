@@ -60,6 +60,7 @@ namespace Pacific
 
             app.Run(async (context) =>
             {
+                context.Response.Redirect("/Home/Index", false);
                 await context.Response.WriteAsync("Hello World!");
             });
         }
